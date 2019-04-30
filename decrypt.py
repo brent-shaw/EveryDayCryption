@@ -46,4 +46,5 @@ parser.add_argument('files', metavar='F', type=str, nargs='+',
 args = parser.parse_args()
 password = getpass.getpass('Password for file decryption:')
 for filename in args.files:
-    decryptFile(filename, password)
+    if filename.endswith('.encrypted'):
+        decryptFile(filename, password)
