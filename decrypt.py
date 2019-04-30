@@ -39,9 +39,9 @@ def decryptFile(filename, password):
 
     print(filename+' decrypted to '+output_file.decode())
 
-parser = argparse.ArgumentParser(description='Encrypt files.')
+parser = argparse.ArgumentParser(description='Decrypt files.')
 parser.add_argument('files', metavar='F', type=str, nargs='+',
-                    help='an integer for the accumulator')
+                    help='file to be decrypted')
 
 args = parser.parse_args()
 password = getpass.getpass('Password for file decryption:')
